@@ -1,0 +1,43 @@
+@import url("border-box.css");
+
+html {
+    font-family: "Helvetica", sans-serif;
+    background-color: #0d1015;
+}
+
+/* Colours 
+======================*/
+#colours {
+    color: #0d1015;
+    color: #f8b031;
+}
+
+/* Header 
+======================*/
+.header {
+    color:#f8b031;
+    font-size: 5rem;
+    display: inline-flex;
+    background-color: green;
+}
+
+.header .name {
+    background-color: red;
+    margin: 0;
+}
+
+.header .title {
+    background-color: blue;
+}
+
+/* Navigation
+======================*/
+
+.nav ul {
+    list-style-type: none;
+    color:#f8b031;
+}
+
+.nav .nav-desc {
+    text-emphasis: bold;
+}
