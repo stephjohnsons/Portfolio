@@ -5,53 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/styles.css"> <!-- Styles -->
-    <link rel="stylesheet" href="../styles/border-box.css"> <!-- Grid view -->
-    <link rel="stylesheet" href="../styles/header.css"> <!-- Header -->
     <title> Stephen Tseu </title>
 </head>
 
 <body>
-    <header>
-        <div class="header col-12">
-            <hr />
-            <p class="name"> Stephen 
-                <span class="last-name"> 
-                    Tseu 
-                </span>
-            </p>
-            <hr />
-            <p class="title"> Web Developer </p>
-            <hr />
-        </div>
-    </header>    
-
     <nav>
-        <div class="nav col-9">
+        <div class="nav">
             <ul>
-                <li> 01 
-                    <span class="nav-desc">  
-                        About
-                    </span> 
+                <li id="nav-name">
+                    Stephen Tseu
                 </li>
-                <li> 02
-                    <span class="nav-desc">  
-                        Portfolio
-                    </span> 
+                <li> 01 <br>
+                     About
                 </li>
-                <li> 03
-                    <span class="nav-desc">  
-                        Contact
-                    </span> 
+                <li> 02 <br>
+                     Portfolio
+                </li>
+                <li> 03 <br>
+                     Contact
                 </li>
             </ul>
         </div>
     </nav>
 
-    <div>
-        <div class="square"></div>
-    </div>
-    <footer>
+    <header class="header">
+        <p id="greeting"></p>
+        <p class="intro"> 
+            I'm Stephen. <br>
+            I am a 
+            <span class="job"> web developer</span> + 
+            <span class="job"> digital content creator. </span>   
+        </p>
+    </header>
+    
+    <content class="content">
+    </content>
 
-    </footer>
+    <script src="../script/script.js" id="greeting"></script>
 </body>
 </html>

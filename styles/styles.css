@@ -1,8 +1,9 @@
 /* Setting Up
 ======================*/
+@import url(fonts.css);
 
 html {
-    font-family: "Helvetica", sans-serif;
+    font-family: "ClashDisplay", sans-serif;
     background-color: #0d1015;
     font-size: 16px; 
 }
@@ -10,27 +11,6 @@ html {
 body {
     margin: 0; /* removing margins in body */
 }
-
-* {
-    box-sizing: border-box;
-  }
-  
-[class*="col-"] {
-  float: left;
-}
-  
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
 
 /* Colours 
 ======================*/
@@ -41,70 +21,88 @@ body {
 
 hr {
     display: block; 
-    border: 1px solid #f8b031;
+    border: 0.1px solid #f8b031; 
     width: 93vw; 
-    margin: 25px 0 15px 0;
+    margin: 20px 0;
 }
 
-/* Header
+/* Header on 
 ======================*/
 
 .header {
     color:#f8b031;
     font-size: 5rem;
-    position: fixed;
-    bottom: 0.3em;
-    left: 0.3em;
+    position: relative;
+    margin: 0.3em;
+    border: 1px solid #f8b031;
+    padding: 35px;
 }
 
 .header .name {
-    font-size: 1.2em;
-    width: 0.6vw;
+    font-size: 0.8em;
+    display: flex;
+    flex-wrap: nowrap;
     line-height: 0.85em;
     margin: 0;
-}
-
-.header .last-name {
-    margin-left: 1.95em; 
 }
 
 .header .title {
     align-items: flex-end;
     margin: 0;
-    font-size: 0.7em;
+    font-size: 0.6em;
     line-height: 0.6em;
 }
 
 /* Navigation 
 ======================*/
 
+.nav {
+    max-width: 100%;
+    margin: 1.2em;
+}
+
 .nav ul {
     list-style-type: none;
     color:#f8b031;
+    display: flex;
+    min-width: 20vw; 
+    justify-content: left;
+    border: 1px solid #f8b031;
+    padding: 0.3em;
+    margin: 0.3em;
 }
 
-.nav .nav-desc {
-    text-emphasis: bold;
+.nav li {
+    margin: 0px 2em;
 }
 
-.square {
-    width: 8em;
-    height: 8em;
-    background-color:#f8b031;
-    position: fixed;
-    right: 1.4em;
-    bottom: 9.5em;
-    z-index: -1;
-  }
-  
-.square:before {
-    content: "";
+#nav-name {
+    max-width: 10px;
+    margin-right: 3em;
+}
+
+/* Content 
+*/
+.content {
+    color:#f8b031;
+    font-size: 5rem;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 6em;
-    height: 6em;
-    background-color: #0d1015;
-    border-radius: 50%;
-  }
+    left: 0.3em;
+}
+
+#greeting {
+    font-size: 0.4em;
+}
+
+.intro {
+    font-size: 0.6em;
+    margin-top: -0.5em;
+    margin-bottom: -0.1em;
+}
+
+.job:hover {
+    text-decoration-line: underline;
+    background-color: #f8b031;
+    color: #0d1015;
+    cursor: alias;
+}
