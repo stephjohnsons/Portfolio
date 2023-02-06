@@ -5,6 +5,7 @@
 html {
     font-family: "ClashDisplay", sans-serif;
     background-color: #0d1015;
+    min-width: 580px;
 }
 
 body {
@@ -94,7 +95,8 @@ hr {
 }
 
 #greeting {
-    font-size: 1.2em;
+    font-size: 1.4em;
+    margin-top: -0.2em;
 }
 
 #nameImputPrompt {
@@ -102,7 +104,7 @@ hr {
 }
 
 .intro {
-    font-size: 2em;
+    font-size: 2.2em;
     margin-top: -0.6em;
     margin-bottom: -0.1em;
 }
@@ -113,29 +115,19 @@ hr {
     margin-bottom: -0.1em;
 }
 
-.job {
+.job,
+a {
     position: relative;
     color: #f8b031;
     transition: 200ms ease-in-out;
 }
 
-.job::before {  
+.job::before,
+a::before {  
     transform: scaleX(0);
     transform-origin: bottom right;
     background: #f8b031;
     color: #f8b031;
-  }
-  
-.job:hover::before {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-    }
-
-.job:hover {
-    color: #0d1015;
-}
-  
-.job::before {
     content: " ";
     display: block;
     position: absolute;
@@ -145,3 +137,76 @@ hr {
     transition: transform .3s ease;
   }
   
+.job:hover::before,
+a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    }
+
+.job:hover,
+a:hover {
+    color: #0d1015;
+}
+  
+/* About
+======================*/
+
+.sections {
+    display: flex;
+    margin: -20px 0;
+}
+
+.about-bio {
+    color:#f8b031;
+    position: relative;
+    border: 1px solid #f8b031;
+    margin: 20px;
+    padding: 35px;
+}
+
+.skills, 
+.languages,
+.contact {
+    color:#f8b031;
+    position: relative;
+    border: 1px solid #f8b031;
+    padding: 35px;
+}
+
+.contact {
+    margin: 20px;
+}
+
+.skills {
+    margin: 20px 10px 20px 20px; 
+}
+
+.languages {
+    margin: 20px 20px 20px 10px; 
+}
+
+
+.skills-table,
+.languages-table {
+    width: 100%;
+}
+
+th {
+    font-weight: 300;
+}
+
+.table-label {
+    font-weight: 500;
+    text-align: right;
+    padding-right: 15px;
+}
+
+#skills {
+    text-align: left;
+    width: 180px;
+}
+
+.table-arrow {
+    width: 20%;
+    text-align: center;
+}
