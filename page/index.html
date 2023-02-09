@@ -4,50 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/styles.css"> <!-- Styles -->
+    <link rel="stylesheet" href="../styles/styles.css"> 
+    <link rel="stylesheet" href="../styles/button.css"> 
     <title> Stephen Tseu </title>
 </head>
 
 <body>
-    <div class="nav">
-        <ul>
-            <li id="nav-name">
-                Stephen Tseu
-            </li>
-            <li> 01 <br>
-                    About
-            </li>
-            <li> 02 <br>
-                    Portfolio
-            </li>
-            <li> 03 <br>
-                    Contact
-            </li>
-        </ul>
-    </div>
-
-    <header class="header">
-        <p id="greeting"><span id="nameImputPrompt"></span></p>
-        <p class="intro"> 
-            I'm Stephen. <br>
-        </p>
-        <p class="job-title">
-            I am a
-            <span class="job"></span>.
-        </p>
-    </header>
-
-    <content class="about" id="about">
-        <section class="about-bio">
-            <h3>
-                About me
-            </h3>
-            <p>
-                I am a web developer with an interest in content creation. I was a classically trained cellist but I have always been passionate about digital technologies and architecture. A nick for details could be my middle name, but I much prefer to be called a foodie!
+    <div class="content-wrap">
+        <div class="item header">
+            <p id="greeting"><span id="nameImputPrompt"></span></p>
+            <p class="intro"> 
+                I'm Stephen. <br>
             </p>
-        </section>
-        
-        <div class="sections">
+            <p class="job-title">
+                I am a
+                <span class="job"></span>
+            </p>
+
+            <div class="switch-div">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+                <span class="play"> This is an aesthetically pleasing but useless button. </span>
+            </div>
+        </div>
+
+        <div class="item about" id="about">
+            <section class="about-bio">
+                <h3 class="about-me">
+                    About me
+                </h3>
+                <p>
+                    I am a web developer with an interest in content creation. I was a classically trained cellist but I have always been passionate about digital technologies and architecture. A nick for details could be my middle name, but I much prefer to be called a foodie!
+                </p>
+            </section>
+        </div>
+            
+        <div class="item sections">
             <section class="skills">
                 <h3>
                     Skills
@@ -145,7 +139,7 @@
             </section>
         </div>
 
-        <section class="contact">
+        <div class="item contact">
             <h3>
                 Contact
             </h3>
@@ -167,8 +161,8 @@
                     <td><a href="https://www.linkedin.com/in/stephentseu/"> Stephen Tseu </a></td>
                 </tr>
             </table>
-        </section>
-    </content>
+        </div>
+    </div>
 
     <script src="../script/script.js" id="greeting"></script>
 </body>
