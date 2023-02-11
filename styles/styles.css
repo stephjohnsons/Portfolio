@@ -5,12 +5,20 @@
 html {
     font-family: "ClashDisplay", sans-serif;
     background-color: #0d1015;
-    min-width: 580px;
 }
 
-body {
-    margin: 0; /* removing margins in body */
-    border: 1px solid #f8b031;
+.content-wrap {
+    margin: 0; 
+    overflow: scroll;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+}
+
+.content-wrap .item {
+    scroll-snap-align: start;
+    scroll-snap-type: x mandatory;
+    height: 100vh;
+    scroll-snap-align: start;
 }
 
 /* Colours 
@@ -22,7 +30,6 @@ body {
 
 hr {
     display: block; 
-    border: 0.1px solid #f8b031; 
     width: 93vw; 
     margin: 20px 0;
 }
@@ -34,7 +41,6 @@ hr {
     color:#f8b031;
     position: relative;
     margin: 20px;
-    border: 1px solid #f8b031;
     padding: 35px;
 }
 
@@ -53,6 +59,17 @@ hr {
     line-height: 0.6em;
 }
 
+#animation {
+    opacity: 0.5;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+span {
+    display: inline-block; 
+}
+
 /* Navigation 
 ======================*/
 
@@ -67,7 +84,6 @@ hr {
     display: flex;
     min-width: 20vw; 
     justify-content: left;
-    border: 1px solid #f8b031;
     padding: 0.3em;
 }
 
@@ -90,13 +106,14 @@ hr {
     left: 0.3em;
 }
 
-.hero-section h3 {
-    border: 1px solid #f8b031;
+#greeting {
+    font-size: 2rem;
+    margin-top: -0.2em;
 }
 
-#greeting {
-    font-size: 1.4em;
-    margin-top: -0.2em;
+#name {
+    font-size: 3rem;
+    margin: -0.5em 0;
 }
 
 #nameImputPrompt {
@@ -109,10 +126,8 @@ hr {
     margin-bottom: -0.1em;
 }
 
-.job-title {
-    font-size: 1.5em;
-    margin-top: -0.1em;
-    margin-bottom: -0.1em;
+.job:hover {
+    cursor: pointer;
 }
 
 .job,
@@ -120,6 +135,10 @@ a {
     position: relative;
     color: #f8b031;
     transition: 200ms ease-in-out;
+}
+
+#job-title {
+    font-size: 2em;
 }
 
 .job::before,
@@ -151,6 +170,11 @@ a:hover {
 /* About
 ======================*/
 
+.about-me {
+    font-size: 25px;
+    font-weight: 800;
+}
+
 .sections {
     display: flex;
     margin: -20px 0;
@@ -159,21 +183,21 @@ a:hover {
 .about-bio {
     color:#f8b031;
     position: relative;
-    border: 1px solid #f8b031;
     margin: 20px;
     padding: 35px;
 }
 
 .skills, 
-.languages,
-.contact {
+.languages {
     color:#f8b031;
     position: relative;
-    border: 1px solid #f8b031;
     padding: 35px;
 }
 
 .contact {
+    color:#f8b031;
+    position: relative;
+    padding: 35px;
     margin: 20px;
 }
 
@@ -209,4 +233,12 @@ th {
 .table-arrow {
     width: 20%;
     text-align: center;
+}
+
+.bg-square {
+    width: 100px;
+    height: 100px;
+    z-index: -1;
+    opacity: 0.5;
+    
 }
