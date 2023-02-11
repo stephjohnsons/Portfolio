@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "dependencies": {
+    "animejs": "^3.2.1",
+    "letterizejs": "^2.0.1"
+  }
+}
