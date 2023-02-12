@@ -2,21 +2,17 @@
 function greetUser() {
     const date = new Date();
     const hour = date.getHours(); 
-    const timestamp = new Date().getTime();
-    const dateNow = new Date(timestamp);
-    const options = { hour: '2-digit', minute: '2-digit', hour12: false};
-    const humanReadableTime = date.toLocaleTimeString("en-US", options);
     
     let greetMessage;
 
     let editable = "<span contenteditable> you</span>";
 
     if (hour < 12 ) {
-        greetMessage = `good morning, ${editable}. It is now ${humanReadableTime}.`
+        greetMessage = `good morning, ${editable}.`
     } else if (hour < 18) {
-        greetMessage = `good afternoon, ${editable}. It is now ${humanReadableTime}.`
+        greetMessage = `good afternoon, ${editable}.`
     } else {
-        greetMessage = `good evening, ${editable}. It is now ${humanReadableTime}.`
+        greetMessage = `good evening, ${editable}.`
     };
 
     document.getElementById("greeting").innerHTML = greetMessage;
@@ -50,32 +46,44 @@ function jobTitle() {
 window.onload = greetUser();
 window.onload = jobTitle();
 
-// Animation of capitalized name using LetterizeJS.
-import "letterize.mjs";
-import "anime.mjs";
-const animateName = new Letterize({
-    targets: ".animation-name"
-  });
+function scrambleText() {
+  let subitems = document.getElementById("subitems");
+  var dictionary = "0123456789qwertyuiopasdfghjklzxcvbnm!?></\a`~+*=@#$%".split('');
+  
+  var ran = function() {
+    return Math.floor(Math.random() * dictionary.length)
+   }
 
-  const animation = anime.timeline({
-    targets: animateName.listAll,
-    delay: anime.stagger(100, {
-      grid: [animateName.list[0].length, animateName.list.length],
-      from: "center"
-    }),
-    loop: true
-  });
+  var ranString = function(amt) {
+    var string = '';
+    for(var i = 0; i < amt; i++) {
+      string += dictionary[ran()];
+    }
+    return string;
+  }
 
-  animation
-    .add({
-      scale: 0.5
-    })
-    .add({
-      letterSpacing: "10px"
-    })
-    .add({
-      scale: 1
-    })
-    .add({
-      letterSpacing: "6px"
-    });
+  var init = function(str) {
+    var count = str.length;
+    var delay = 50;
+    
+    subitems.innerHTML = '';
+    
+    var gen = setInterval(function() {
+      el.setAttribute('data-before', ranString(count));
+      el.setAttribute('data-after', ranString(count));
+      if(delay > 0) {
+        delay--;
+      }
+      else {
+        if(count < str.length) {
+          el.innerHTML += str[str.length - count-1];
+        }
+        count--;
+        if(count === -1) {
+          clearInterval(gen);
+          showButton();
+        }
+      }
+    }, 32);
+}
+}

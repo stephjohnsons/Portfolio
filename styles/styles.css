@@ -7,6 +7,7 @@ html {
     background-color: #0d1015;
 }
 
+
 .content-wrap {
     margin: 0; 
     overflow: scroll;
@@ -28,12 +29,6 @@ html {
     color: #f8b031;
 }
 
-hr {
-    display: block; 
-    width: 93vw; 
-    margin: 20px 0;
-}
-
 /* Header on 
 ======================*/
 
@@ -41,7 +36,7 @@ hr {
     color:#f8b031;
     position: relative;
     margin: 20px;
-    padding: 35px;
+    padding: 60vh 35px 35px 35px;
 }
 
 .header .name {
@@ -59,15 +54,12 @@ hr {
     line-height: 0.6em;
 }
 
+
 #animation {
     opacity: 0.5;
     letter-spacing: 2px;
     line-height: 1.5;
     margin: 0;
-}
-
-span {
-    display: inline-block; 
 }
 
 /* Navigation 
@@ -137,8 +129,25 @@ a {
     transition: 200ms ease-in-out;
 }
 
+#job-title-beg {
+    font-size: 2em;
+    margin: 25px 0 0 5px;
+}
+
 #job-title {
     font-size: 2em;
+    margin: 25px 0 0 5px;
+}
+
+#blank-wrap {
+    width: 85px; 
+    grid-row-start: 1;
+}
+
+.cta {
+    position: relative;
+    left: 14vw;
+    margin: 2em 0 -1.6em 0 ;
 }
 
 .job::before,
@@ -166,18 +175,22 @@ a:hover::before {
 a:hover {
     color: #0d1015;
 }
+
+.switch-div {
+    margin-top: 20px;
+}
   
 /* About
 ======================*/
 
-.about-me {
+.about-title {
     font-size: 25px;
     font-weight: 800;
 }
 
-.sections {
-    display: flex;
-    margin: -20px 0;
+.portrait {
+    height: 200px;
+    border-radius: 40px;
 }
 
 .about-bio {
@@ -187,12 +200,44 @@ a:hover {
     padding: 35px;
 }
 
+.about-bio p {
+    font-size: 1.2em;
+    max-width: 50vw;
+    margin-top: -20px;
+}
+
 .skills, 
 .languages {
     color:#f8b031;
     position: relative;
     padding: 35px;
 }
+
+.skills {
+    margin: 20px;
+}
+
+.languages {
+    margin: -60px 20px 0 20px;
+}
+
+.subtitle {
+    font-weight: 500;
+}
+
+#skills,
+#lang-level,
+#contact-links {
+    font-weight: 200;
+    margin-left: 15px; 
+    line-height: 1.2;
+    display: inline;
+    position: absolute;
+    left: 20vw;
+}
+
+/* Contact
+======================*/
 
 .contact {
     color:#f8b031;
@@ -201,44 +246,7 @@ a:hover {
     margin: 20px;
 }
 
-.skills {
-    margin: 20px 10px 20px 20px; 
-}
-
-.languages {
-    margin: 20px 20px 20px 10px; 
-}
-
-
-.skills-table,
-.languages-table {
-    width: 100%;
-}
-
-th {
-    font-weight: 300;
-}
-
-.table-label {
-    font-weight: 500;
-    text-align: right;
-    padding-right: 15px;
-}
-
-#skills {
-    text-align: left;
-    width: 180px;
-}
-
-.table-arrow {
-    width: 20%;
-    text-align: center;
-}
-
-.bg-square {
-    width: 100px;
-    height: 100px;
-    z-index: -1;
-    opacity: 0.5;
-    
+a {
+    font-weight: 400;
+    text-decoration-line: overline;
 }
