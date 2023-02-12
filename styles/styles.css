@@ -20,6 +20,7 @@ html {
     scroll-snap-type: x mandatory;
     height: 100vh;
     scroll-snap-align: start;
+    transition: height 0.2s ease-in-out;
 }
 
 /* Colours 
@@ -29,7 +30,7 @@ html {
     color: #f8b031;
 }
 
-/* Header on 
+/* Header
 ======================*/
 
 .header {
@@ -60,42 +61,6 @@ html {
     letter-spacing: 2px;
     line-height: 1.5;
     margin: 0;
-}
-
-/* Navigation 
-======================*/
-
-.nav {
-    max-width: 100%;
-    margin: 20px;
-}
-
-.nav ul {
-    list-style-type: none;
-    color:#f8b031;
-    display: flex;
-    min-width: 20vw; 
-    justify-content: left;
-    padding: 0.3em;
-}
-
-.nav li {
-    margin: 0px 2em;
-}
-
-#nav-name {
-    max-width: 10px;
-    margin-right: 5em;
-    transition: 800ms ease-in-out; 
-}
-
-/* Content 
-*/
-.content {
-    color:#f8b031;
-    font-size: 5rem;
-    position: absolute;
-    left: 0.3em;
 }
 
 #greeting {
@@ -183,7 +148,7 @@ a:hover {
 /* About
 ======================*/
 
-.about-title {
+h3 {
     font-size: 25px;
     font-weight: 800;
 }
@@ -221,10 +186,6 @@ a:hover {
     margin: -60px 20px 0 20px;
 }
 
-.subtitle {
-    font-weight: 500;
-}
-
 #skills,
 #lang-level,
 #contact-links {
@@ -234,6 +195,112 @@ a:hover {
     display: inline;
     position: absolute;
     left: 20vw;
+}
+
+/* Works
+======================*/
+.works {
+    color:rgb(248, 176, 49);
+    position: relative;
+    margin: 20px;
+    padding: 35px;
+}
+
+/* Copyright (c) 2023 by Hyperplexed (https://codepen.io/Hyperplexed/pen/zYWvXMM)
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+:root {
+    --g1: rgb(248, 176, 49);
+    --g2: rgb(247, 214, 159);
+}
+  
+@keyframes background-pan {
+    from {
+        background-position: 0% center;
+    }
+    to {
+        background-position: -300% center;
+    }
+}
+
+.works {
+    animation: background-pan 10s linear infinite;
+    background: linear-gradient(
+        to right,
+        var(--g1),
+        var(--g2),
+        var(--g1)
+    );
+    background-size: 200%;
+    height: 91vh;
+    width: 93.5vw;
+    overflow: hidden;
+    margin: 0px;
+}
+
+#tiles {
+    margin: -34px;
+    height: calc(100vh);
+    width: calc(98.5vw);
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-template-rows: repeat(var(--rows), 1fr);
+}
+
+.tile {
+    cursor: pointer;
+    position: relative;
+}
+
+.tile:hover:before {
+    background-color: rgb(30, 30, 30);
+}
+
+.tile:before {
+    background-color: #0d1015;
+    content: "";
+    inset: 0.5px;
+    position: absolute;
+}
+
+.works {
+    color: #0d1015;
+}
+
+#work-title {
+    margin: 0px;
+    pointer-events: none;
+    width: 50vw;
+    z-index: 3;
+    position: absolute;
+    top: 30px;
+    opacity: 0;
+    transition: 600ms ease-in;
+  }
+
+.works-list {
+    position: absolute;
+    top: 70px;
+    z-index: 0;
+    opacity: 0;
+    transition: 800ms ease-in;
+}
+
+body.toggled #work-title {
+    opacity: 1;
+}
+
+body.toggled .works-list {
+    opacity: 1;
+    z-index: 5;
+}
+
+.works-list a {
+    color:#0d1015;
 }
 
 /* Contact
