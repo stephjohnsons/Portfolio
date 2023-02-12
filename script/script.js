@@ -1,3 +1,4 @@
+// Sets an interactive document title. 
 let docTitle = document.title;
 window.addEventListener("blur", () => {
   document.title = "Come back :(";
@@ -26,6 +27,7 @@ function greetUser() {
     document.getElementById("greeting").innerHTML = greetMessage;
 }
 
+// Changes the job titles dynamically onClick. 
 function jobTitle() {
     const job1 = "web developer.";
     const job2 = "UI designer.";
@@ -51,6 +53,7 @@ function jobTitle() {
     });
 };
 
+// Functions executed when the website is loaded.
 window.onload = greetUser();
 window.onload = jobTitle();
 

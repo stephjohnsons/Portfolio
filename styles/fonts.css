@@ -1,3 +1,5 @@
+/* ClashDisplay is the only font used. 
+ * Exported to styles.css.              */
 @font-face {
     font-family: "ClashDisplay";
     src: url("../fonts/ClashDisplay-Variable.ttf") format("truetype");

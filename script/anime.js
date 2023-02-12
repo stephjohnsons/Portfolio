@@ -1308,6 +1308,7 @@ anime.timeline = timeline;
 anime.easing = parseEasings;
 anime.penner = penner;
 anime.random = function (min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; };
+/* End of code from anime.js. */
 
 // Animate grids on Works page. 
 /* Copyright (c) 2023 by Hyperplexed (https://codepen.io/Hyperplexed/pen/zYWvXMM)
@@ -1375,3 +1376,4 @@ const createGrid = () => {
 createGrid();
 
 window.onresize = () => createGrid();
+/* End of code by Hyperplexed. */

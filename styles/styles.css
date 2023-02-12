@@ -7,7 +7,7 @@ html {
     background-color: #0d1015;
 }
 
-
+/* Wraps contents with no margin on screen. */
 .content-wrap {
     margin: 0; 
     overflow: scroll;
@@ -23,16 +23,8 @@ html {
     transition: height 0.2s ease-in-out;
 }
 
-/* Colours 
-======================*/
-#colours {
-    color: #0d1015;
-    color: #f8b031;
-}
-
 /* Header
 ======================*/
-
 .header {
     color:#f8b031;
     position: relative;
@@ -111,8 +103,12 @@ a {
 
 .cta {
     position: relative;
-    left: 14vw;
+    left: 100px;
     margin: 2em 0 -1.6em 0 ;
+}
+
+.play-caption {
+    margin-left: 5px;
 }
 
 .job::before,
@@ -147,7 +143,6 @@ a:hover {
   
 /* About
 ======================*/
-
 h3 {
     font-size: 25px;
     font-weight: 800;
@@ -279,7 +274,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     position: absolute;
     top: 30px;
     opacity: 0;
-    transition: 600ms ease-in;
+    transition: 400ms ease-in;
   }
 
 .works-list {
@@ -287,7 +282,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     top: 70px;
     z-index: 0;
     opacity: 0;
-    transition: 800ms ease-in;
+    transition: 600ms ease-in;
+    width: 50vw;
+    max-width: 400px;
 }
 
 body.toggled #work-title {
@@ -298,14 +295,20 @@ body.toggled .works-list {
     opacity: 1;
     z-index: 5;
 }
+/* End of code by Hyperplexed. */
 
 .works-list a {
     color:#0d1015;
 }
 
+.works-caption {
+    margin: -15px 0 2px 0;
+    font-style: italic;
+    font-size: 0.8em;
+}
+
 /* Contact
 ======================*/
-
 .contact {
     color:#f8b031;
     position: relative;

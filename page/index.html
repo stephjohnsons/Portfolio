@@ -10,7 +10,10 @@
 </head>
 
 <body>
+    <!-- Content Wrapper -->
+    <!--- A total of 5 pages are wrapped in here. --->
     <div class="content-wrap">
+        <!-- ======= Header Page ======= -->
         <div class="item header">
             <p id="greeting"></p>
             <p id="name"> I'm Stephen. </p>    
@@ -18,16 +21,18 @@
             <p class="wrap-child" id="job-title">
                 I am a <span class="job"></span>
             </p>
-
+            
             <div class="switch-div">
                 <label class="switch">
                     <input type="checkbox">
                     <span class="slider"></span>
                 </label>
-                <span class="play"></span> This is an aesthetically pleasing button that does nothing. 
+                <span class="play"></span> <span class="play-caption">This is an aesthetically pleasing button that does nothing. </span>
             </div>
         </div>
+        <!-- End of Header -->
 
+        <!-- ======= About Page ======= -->
         <div class="item" id="about">
             <section class="about-bio">
                 <img src="../images/portrait.png" class="portrait">
@@ -48,7 +53,9 @@
                 </p>
             </section>
         </div>
+        <!-- End of About -->
 
+        <!-- ======= Works Page ======= -->
         <div class="item">
             <section class="works">
                 <div id="tiles"></div>
@@ -57,19 +64,44 @@
                 </h3>
                 <div class="works-list">
                     <p class="subtitle">
-                        <a href="https://stephjohnsons.github.io/page/rps">
+                        <a href="https://stephjohnsons.github.io/page/rps" target="_blank">
                             Rock, Paper, Scissors
-                        </a>
+                        </a><br>
+                        <p class="works-caption"> HTML, CSS, JS </p>
+                        Assignment from Brainnest Industry Training Program.
                     </p>
                     <p class="subtitle">
-                        <a href="https://stephjohnsons.github.io/page/calculator">
+                        <a href="https://stephjohnsons.github.io/page/calculator" target="_blank">
                             Calculator
-                        </a>
+                        </a><br>
+                        <p class="works-caption"> HTML, CSS, JS </p>
+                        Assignment from Brainnest Industry Training Program.
+                    </p>
+                    <p class="subtitle">
+                        <a href="https://www.figma.com/file/pSq3ghUdyYU7NxHKb8Fb8r/Veronika-%E2%80%A2-Karl-Th%C3%B6ne-Website?node-id=0%3A1&t=2f6Sxwml4rXWU7Se-1" target="_blank">
+                            Wireframing for Karl Thöne's Website
+                        </a><br>
+                        <p class="works-caption"> Figma </p>
+                        This wireframe is used to create Karl Thöne's website.<br>
+                        In conjunction with a music festival celebrating 
+                        his 100th birthday on 2024. 
+                    </p>
+                    <p class="subtitle">
+                        <a href="https://www.instagram.com/kameratakl" target="_blank">
+                            Kamerata Kuala Lumpur
+                        </a><br>
+                        <p class="works-caption"> Adobe PS, AI. Digital content planning. </p>
+                        Kamerata KL is a chamber orchestra based in KL.<br>
+                        As Kamerata KL's president, I am in charge of
+                        adminstrative processes for the ensemble,
+                        as well as its social media and digital contents. 
                     </p>
                 </div>
             </section>
         </div>
+        <!-- End of Works -->
 
+        <!-- ======= Skills and Languages Page ======= -->
         <div class="item">
             <section class="skills">
                 <h3>
@@ -124,7 +156,9 @@
                 </p>
             </section>
         </div>
+        <!-- End of Skills/Languages -->
 
+        <!-- ======= Contact Page ======= -->
         <div class="item contact">
             <h3>
                 Contact
@@ -161,12 +195,21 @@
                     </a>
                 </span>
             </p>
+            <p class="subtitle">
+                Resume
+                <span id="contact-links"> 
+                    <a href="https://drive.google.com/file/d/14NhzslgMU8rJRlM727mMHHBtDwqtCLBw/view"
+                       target="_blank"> 
+                        click here
+                    </a>
+                </span>
+            </p>
         </div>
+        <!-- End of Contact -->
     </div>
+    <!-- End of Wrapper -->
 
     <script src="../script/script.js"></script>
-    <script type="module" src="../node_modules/animejs/lib/anime.js"></script>
-    <script type="module" src="../node_modules/letterizejs/lib/letterize.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="../script/anime.js"></script>
 </body>
 </html>
