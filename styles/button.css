@@ -1,7 +1,8 @@
 .switch-div {
     display: inline-flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    margin-top: 20px;
 }
 
 /* The switch - the box around the slider */
@@ -80,9 +81,4 @@
   input:hover:checked + .slider:before {
    transform: translateX(calc(var(--switch_width) - var(--switch_height))) translateY(-0.3em);
    box-shadow: 0 0.3em 0 var(--outline_color);
-  }
-
-  .play {
-    margin-left: 5px;
-    font-size: 14px;
   }

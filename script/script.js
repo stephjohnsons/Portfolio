@@ -7,6 +7,7 @@ window.addEventListener("focus", () => {
   document.title = docTitle;
 });
 
+
 // Greeting user based on time of day. 
 function greetUser() {
     const date = new Date();
@@ -32,7 +33,7 @@ function jobTitle() {
     const job1 = "web developer.";
     const job2 = "UI designer.";
     const job3 = "digital content creator.";
-    const job4 = "musician.";
+    const job4 = "dreamer.";
 
     let currentJob = job1; 
 
@@ -56,4 +57,3 @@ function jobTitle() {
 // Functions executed when the website is loaded.
 window.onload = greetUser();
 window.onload = jobTitle();
-
